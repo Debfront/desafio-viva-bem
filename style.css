@@ -140,7 +140,6 @@ header .box-header nav a {
   flex-direction: column;
   align-items: center;
   padding-top: 3rem;
-  padding-bottom: 3rem;
   height: 40%;
 }
 .section-feminina .titulo-rosa {
@@ -253,4 +252,63 @@ header .box-header nav a {
   padding-top: 0.8rem;
   font-family: "Roboto", sans-serif;
   flex-wrap: wrap;
+}
+
+.titulo-alerta {
+  font-size: 2.9rem;
+  background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.titulo-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.article-alertas {
+  width: 26rem;
+  height: 10.8rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.article-alertas p {
+  font-size: 18px;
+}
+
+.alertas1,
+.alertas2 {
+  margin-top: 2rem;
+  display: flex;
+  gap: 25px;
+}
+.alertas1 h3,
+.alertas2 h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.card-vinho {
+  background-color: #F9D5E5;
+  color: #AD346A;
+}
+
+.card-azulclaro {
+  background-color: #CFE2F3;
+  color: #2769A3;
+}
+
+.card-verde {
+  background-color: #D4EDDA;
+  color: #244A2D;
+}
+
+.card-amarelo {
+  background-color: #FFE9C2;
+  color: #976C00;
 }/*# sourceMappingURL=style.css.map */
