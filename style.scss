@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +8,14 @@
 }
 
 header {
-  height: 90vh;
+  height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-image: url("./img/bannerHeader.png");
   background-repeat: no-repeat;
   background-size: contain;
+
   .box-header {
     margin-top: 30px;
     width: 80%;
@@ -23,15 +25,19 @@ header {
     align-items: center;
     justify-content: space-around;
     background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+
     nav {
       width: 40%;
       height: 10vh;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
+      gap: 2rem;
+
       a {
         color: white;
         font-family: "Roboto", sans-serif;
+        font-size: 1.3rem;
       }
     }
   }
@@ -45,14 +51,10 @@ header {
 
   .box-titulo {
     height: 60vh;
-    width: 38vw;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    flex-wrap: wrap;
+    font-family: "Inter", sans-serif;
 
     h2 {
-      font-size: 2.9rem;
+      font-size: 2.7rem;
       background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -62,44 +64,51 @@ header {
     }
 
     p {
-      font-size: 29px;
+      font-size: 1.625rem;
+      width: 60%;
+      margin-top: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    div {
+      display: flex;
+      gap: 1.5rem;
+      font-weight: 500;
+    }
+
+    .btn-azul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 16rem;
+      color: white;
+      background-color: #1173d4;
+      height: 3rem;
+      border-radius: 10px;
+    }
+
+    .btn-branco {
+      border: 1px solid #1173d4;
+      color: #1173d4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 15rem;
+      height: 3rem;
+      border-radius: 10px;
     }
   }
-}
-
-.btn-azul {
-  background: #1173d4;
-  width: 250px;
-  height: 44px;
-  border: none;
-  color: #fff;
-  border-radius: 10px;
-}
-
-.btn-branco {
-  background: #fff;
-  width: 250px;
-  height: 44px;
-  border: 1px solid #1173d4;
-  color: #1173d4;
-  border-radius: 10px;
-}
-
-.button {
-  display: flex;
-  gap: 15px;
 }
 
 .section-rotina {
   background-color: #f8f9fa;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  width: 100%;
   gap: 3rem;
   padding: 80px;
-  height: 536px;
-
   margin-bottom: 45px;
 
   .titulos {
@@ -107,15 +116,35 @@ header {
     background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
     font-weight: bold;
   }
 
   p {
     font-size: 24px;
     text-align: center;
-    flex-wrap: wrap;
+  }
+}
+
+.articles {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+
+  .exames {
+    width: 282px;
+    box-shadow: 0px 0px 3px 3px #00000025;
+    border-radius: 10px;
+    margin-top: 2.25rem;
+    align-items: center;
+    height: 250px;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -148,22 +177,18 @@ header {
   align-items: center;
   padding-top: 3rem;
 
-  height: 40%;
-
   .titulo-rosa {
     font-size: 2.9rem;
     background: linear-gradient(to right, #f9016f 0%, #930885 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;
     font-weight: bold;
   }
 
   h3 {
     font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
 
   .exames-fem {
@@ -177,7 +202,6 @@ header {
     align-items: center;
     padding-top: 0.8rem;
     font-family: "Roboto", sans-serif;
-    flex-wrap: wrap;
   }
 
   .articles {
@@ -206,16 +230,10 @@ header {
   flex-direction: column;
   gap: 35px;
   max-width: 800px;
-
   justify-content: center;
   padding: 30px;
 
-  .cards-fem1 {
-    display: flex;
-    max-width: 900px;
-    gap: 25px;
-  }
-
+  .cards-fem1,
   .cards-fem2 {
     display: flex;
     max-width: 900px;
@@ -229,15 +247,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
 
-  .cards-masc1 {
-    display: flex;
-    max-width: 900px;
-    gap: 25px;
-  }
-
+  .cards-masc1,
   .cards-masc2 {
     display: flex;
     max-width: 900px;
@@ -250,13 +262,12 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;
     font-weight: bold;
   }
+
   h3 {
     font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
 }
 
@@ -271,7 +282,6 @@ header {
   align-items: center;
   padding-top: 0.8rem;
   font-family: "Roboto", sans-serif;
-  flex-wrap: wrap;
 }
 
 .titulo-alerta {
@@ -280,7 +290,6 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
   font-weight: bold;
   margin-top: 2rem;
 }
@@ -319,17 +328,14 @@ header {
   background-color: #f9d5e5;
   color: #ad346a;
 }
-
 .card-azulclaro {
   background-color: #cfe2f3;
   color: #2769a3;
 }
-
 .card-verde {
   background-color: #d4edda;
   color: #244a2d;
 }
-
 .card-amarelo {
   background-color: #ffe9c2;
   color: #976c00;
@@ -339,8 +345,7 @@ footer {
   background-color: #313461;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-  padding: 4rem 0 2rem 0;
-
+  padding: 4rem 0 2rem;
 
   a {
     text-decoration: none;
@@ -353,7 +358,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     gap: 4rem;
-      margin-bottom: 2rem;
+    margin-bottom: 2rem;
 
     ul {
       display: flex;
@@ -382,17 +387,258 @@ footer {
   }
 }
 
-  .contato {
-        gap: 1rem;
+.contato {
+  gap: 1rem;
 
-        p {
-            width: 100%;
-        }
-    }
+  p {
+    width: 100%;
+  }
+}
 
 .direitos {
   margin-top: 2rem;
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  header {
+    height: auto;
+    background-size: cover;
+
+    .box-header {
+      width: 95%;
+      margin-bottom: 2.5rem;
+      padding: 10px;
+      flex-direction: column;
+      gap: 15px;
+
+      nav {
+        width: 100%;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  .box-banner {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+
+    .box-titulo {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        font-size: 2.3rem;
+      }
+    }
+  }
+
+  .section-rotina {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .articles {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .exames {
+    width: 250px;
+  }
+
+  footer .rodape {
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer .logo {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding-bottom: 40px;
+
+    .box-header {
+      flex-direction: column;
+      padding: 15px;
+      gap: 15px;
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+  }
+
+  .box-banner {
+    width: 95%;
+    flex-direction: column;
+
+    .box-titulo {
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .button {
+    flex-direction: column;
+    align-items: center;
+
+    .btn-azul,
+    .btn-branco {
+      width: 80%;
+    }
+  }
+
+  .section-feminina .exames-fem,
+  .section-masc .exames-masc {
+    width: 80%;
+    height: auto;
+  }
+
+  .alertas1,
+  .alertas2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .rodape {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .box-titulo {
+    h2 {
+      font-size: 1.7rem;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .exames {
+    width: 90%;
+  }
+
+  .article-alertas {
+    width: 90%;
+    height: auto;
+  }
+
+  .cards-masc1,
+  .cards-masc2,
+  .cards-fem1,
+  .cards-fem2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .logo img {
+    width: 10rem;
+  }
+
+  .titulo-alerta,
+  .titulo-rosa,
+  .titulo-azul,
+  .titulos {
+    font-size: 2rem;
+  }
+}
+
+.section-rotina {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+  padding: 80px;
+  margin-bottom: 45px;
+
+  .titulos {
+    font-size: 2.9rem;
+    background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.articles {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+
+  .exames {
+    width: 282px;
+    box-shadow: 0px 0px 3px 3px #00000025;
+    border-radius: 10px;
+    margin-top: 2.25rem;
+    align-items: center;
+    height: 250px;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-banner {
+    .button {
+      display: flex;
+      flex-direction: row;
+      width: 80%;
+    }
+  }
+  .section-rotina .titulos {
+    font-size: 2.3rem;
+    background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+
+  .articles {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    .exames {
+      width: 90%;
+    }
+  }
 }

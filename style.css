@@ -7,7 +7,7 @@
 }
 
 header {
-  height: 90vh;
+  height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -31,10 +31,12 @@ header .box-header nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  gap: 2rem;
 }
 header .box-header nav a {
   color: white;
   font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
 }
 
 .box-banner {
@@ -45,14 +47,10 @@ header .box-header nav a {
 }
 .box-banner .box-titulo {
   height: 60vh;
-  width: 38vw;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  flex-wrap: wrap;
+  font-family: "Inter", sans-serif;
 }
 .box-banner .box-titulo h2 {
-  font-size: 2.9rem;
+  font-size: 2.7rem;
   background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,41 +59,46 @@ header .box-header nav a {
   font-weight: bold;
 }
 .box-banner .box-titulo p {
-  font-size: 29px;
+  font-size: 1.625rem;
+  width: 60%;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
 }
-
-.btn-azul {
-  background: #1173d4;
-  width: 250px;
-  height: 44px;
-  border: none;
-  color: #fff;
+.box-banner .box-titulo div {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+.box-banner .box-titulo .btn-azul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  color: white;
+  background-color: #1173d4;
+  height: 3rem;
   border-radius: 10px;
 }
-
-.btn-branco {
-  background: #fff;
-  width: 250px;
-  height: 44px;
+.box-banner .box-titulo .btn-branco {
   border: 1px solid #1173d4;
   color: #1173d4;
-  border-radius: 10px;
-}
-
-.button {
   display: flex;
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 10px;
 }
 
 .section-rotina {
   background-color: #f8f9fa;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  width: 100%;
   gap: 3rem;
   padding: 80px;
-  height: 536px;
   margin-bottom: 45px;
 }
 .section-rotina .titulos {
@@ -103,14 +106,33 @@ header .box-header nav a {
   background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
   font-weight: bold;
 }
 .section-rotina p {
   font-size: 24px;
   text-align: center;
-  flex-wrap: wrap;
+}
+
+.articles {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+.articles .exames {
+  width: 282px;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1450980392);
+  border-radius: 10px;
+  margin-top: 2.25rem;
+  align-items: center;
+  height: 250px;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .articles {
@@ -140,7 +162,6 @@ header .box-header nav a {
   flex-direction: column;
   align-items: center;
   padding-top: 3rem;
-  height: 40%;
 }
 .section-feminina .titulo-rosa {
   font-size: 2.9rem;
@@ -148,13 +169,11 @@ header .box-header nav a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
   font-weight: bold;
 }
 .section-feminina h3 {
   font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 .section-feminina .exames-fem {
   background-color: #fefefe;
@@ -167,7 +186,6 @@ header .box-header nav a {
   align-items: center;
   padding-top: 0.8rem;
   font-family: "Roboto", sans-serif;
-  flex-wrap: wrap;
 }
 .section-feminina .articles {
   flex-wrap: wrap;
@@ -195,11 +213,7 @@ header .box-header nav a {
   justify-content: center;
   padding: 30px;
 }
-.cards-menores .cards-fem1 {
-  display: flex;
-  max-width: 900px;
-  gap: 25px;
-}
+.cards-menores .cards-fem1,
 .cards-menores .cards-fem2 {
   display: flex;
   max-width: 900px;
@@ -212,14 +226,9 @@ header .box-header nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
 }
-.section-masc .cards-masc1 {
-  display: flex;
-  max-width: 900px;
-  gap: 25px;
-}
+.section-masc .cards-masc1,
 .section-masc .cards-masc2 {
   display: flex;
   max-width: 900px;
@@ -231,13 +240,11 @@ header .box-header nav a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
   font-weight: bold;
 }
 .section-masc h3 {
   font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .exames-masc {
@@ -251,7 +258,6 @@ header .box-header nav a {
   align-items: center;
   padding-top: 0.8rem;
   font-family: "Roboto", sans-serif;
-  flex-wrap: wrap;
 }
 
 .titulo-alerta {
@@ -260,7 +266,6 @@ header .box-header nav a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
   font-weight: bold;
   margin-top: 2rem;
 }
@@ -318,7 +323,7 @@ footer {
   background-color: #313461;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-  padding: 4rem 0 2rem 0;
+  padding: 4rem 0 2rem;
 }
 footer a {
   text-decoration: none;
@@ -363,6 +368,209 @@ footer .logo img {
 .direitos {
   margin-top: 2rem;
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  header {
+    height: auto;
+    background-size: cover;
+  }
+  header .box-header {
+    width: 95%;
+    margin-bottom: 2.5rem;
+    padding: 10px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  header .box-header nav {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .box-banner {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+  }
+  .box-banner .box-titulo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .box-banner .box-titulo h2 {
+    font-size: 2.3rem;
+  }
+  .section-rotina {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .articles {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .exames {
+    width: 250px;
+  }
+  footer .rodape {
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: center;
+  }
+  footer .logo {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding-bottom: 40px;
+  }
+  header .box-header {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+  header .box-header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .box-banner {
+    width: 95%;
+    flex-direction: column;
+  }
+  .box-banner .box-titulo h2 {
+    font-size: 2rem;
+  }
+  .box-banner .box-titulo p {
+    font-size: 22px;
+  }
+  .button {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button .btn-azul,
+  .button .btn-branco {
+    width: 80%;
+  }
+  .section-feminina .exames-fem,
+  .section-masc .exames-masc {
+    width: 80%;
+    height: auto;
+  }
+  .alertas1,
+  .alertas2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .rodape {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .box-titulo h2 {
+    font-size: 1.7rem;
+  }
+  .box-titulo p {
+    font-size: 18px;
+  }
+  .exames {
+    width: 90%;
+  }
+  .article-alertas {
+    width: 90%;
+    height: auto;
+  }
+  .cards-masc1,
+  .cards-masc2,
+  .cards-fem1,
+  .cards-fem2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .logo img {
+    width: 10rem;
+  }
+  .titulo-alerta,
+  .titulo-rosa,
+  .titulo-azul,
+  .titulos {
+    font-size: 2rem;
+  }
+}
+.section-rotina {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+  padding: 80px;
+  margin-bottom: 45px;
+}
+.section-rotina .titulos {
+  font-size: 2.9rem;
+  background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+.section-rotina p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.articles {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+.articles .exames {
+  width: 282px;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.1450980392);
+  border-radius: 10px;
+  margin-top: 2.25rem;
+  align-items: center;
+  height: 250px;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .box-banner .button {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+  .section-rotina .titulos {
+    font-size: 2.3rem;
+    background: linear-gradient(to right, #4247a2 0%, #52b095 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  .articles {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .articles .exames {
+    width: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */
